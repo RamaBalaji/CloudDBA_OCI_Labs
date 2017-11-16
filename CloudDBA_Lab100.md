@@ -232,9 +232,9 @@ Storage.
 
 ![](Picture100_Lab3.png)
 
-** END of SECTION #1 **
+**END of SECTION #1**
 
-##SECTION #2 ##
+## SECTION #2 
 
 This section outlines steps needed to restore and recover the database built on Oracle Cloud Infrastructure. 
 
