@@ -232,7 +232,7 @@ Storage.
 
 ![](Picture100_Lab3.png)
 
-**END of SECTION #1**
+ **END of SECTION #1**
 
 ## SECTION #2 
 
@@ -258,14 +258,14 @@ To list the database using dbcli
 root@clouddb ~]# dbcli list-databases
 ```
 
-You will something similar to the below output. 
+You will see something similar to the below output. 
 
 ID                                                                             DB Name    DB Version   CDB    Class    Shape    Storage  Status       DbHomeID
 ---------------------------------------- ---------- ------------ ------ -------- -------- -------- ------------ -----------------------------ab76477b-8239-4b44-b0e1-45c9e2f20090     CLOUDDB    12.2.0.1     true   OLTP     odb2     ASM      Configured   0eb0580b-6282-4a35-a2e0-adcaad7548e1
 
 Next, let’ s repeat  Step 3 in **SECTION #1** to install **Database Backup Cloud Module**. 
 
-### **STEP 3**
+### **STEP 2**
 
 
 Copy the wallet files from **ON-PREM** database to the **CLOUD** DB System. You can use **WINSCP** on your desktop/laptop to copy the files.  These files are owned by ‘asmcmd’ ; as you can login as **grid** account, you need to copy these files to another directory owned by ‘opc’ or /tmp and copy them over to CLOUDDB. 
@@ -277,7 +277,7 @@ cp ewallet.p12 cwallet.sso /tmp/.
 ```
 Copy the above files to the CLOUDDB system under **TDE** directory. 
 
-### **STEP 4**
+### **STEP 3**
 
 Let’s make sure we create the storage required for the database. In this case, we will create the storage in **ASM** which is default for databases created in OCI.
 
@@ -299,7 +299,7 @@ Let’s use dbcli to create the storage needed. We will create 10GB to start wit
 
 Storage of 10GB is created in **ASM** for **ONPREM** database
 
-### **STEP 5**
+### **STEP 4**
 
 Login as oracle id and set the environment variables.
 ```
@@ -367,7 +367,7 @@ RMAN>
 RMAN> shutdown immediate;
 
 ```
-### **STEP 6**
+### **STEP 5**
 
 Restart the database with the restored spfile and make parameter changes to match the destination database. 
 
@@ -523,7 +523,7 @@ Statement processed
 RMAN>
 ```
 
-### **STEP 7**
+### **STEP 6**
 
 Now we need to make sure, we register the **local_listener** of the newly created database to the listener.
 ``` 
@@ -550,7 +550,7 @@ LISTENER_ONPREM =
   (ADDRESS = (PROTOCOL = TCP)(HOST = clouddb.sub09270146352.hdnetwork.oraclevcn.com)(PORT = 1521))
 ```
 
-### **STEP 8**
+### **STEP 7**
 
 Lets go ahead and register the database. Login to root and run the below dbcli command.
 
@@ -570,10 +570,11 @@ Password for SYS:
 
 ```
 
-### **STEP 9**
+### **STEP 8**
 
 Make corresponding entry in to **/etc/oratab** for the new database so it can start and stop automatically whenever the DB system reboots. 
 
 ## Congratulations! You have successfully completed migrating your On-premises database to Oracle Cloud Infrastructure. We will learn more about operating the Database in Oracle CLoud Infrastructure in the subsequent Labs!
 
+If you have any questions on this Lab please contact **rama.balaji@oracle.com**
 
