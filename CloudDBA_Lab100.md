@@ -1,4 +1,4 @@
-![](images/Heading100.png)
+![](Heading100.png)
 Updated: November 16, 2017
 
 ## Introduction
@@ -37,7 +37,7 @@ Database to Oracle Database hosted on Oracle Cloud Infrastructure.
 
 ## Architecture
 
-![](images/Architecture_100.png)
+![](Architecture_100.png)
 
 There are two **SECTIONS** in this document.
 
@@ -54,7 +54,7 @@ Click on **Storage** menu,and then **Object Storage**, press ‘Create Bucket’
 below link
  **https://docs.us-phoenix-1.oraclecloud.com/Content/Object/Concepts/overview.htm**
 
- ![](images/Picture100_Lab1.png)
+ ![](Picture100_Lab1.png)
 
 ### **STEP 2**
 
@@ -74,7 +74,7 @@ So, as next step, lets generate a Swift password from OCI console.
 On the right-hand corner of the console, click on the login name **(first.last@company.com )**, choose ‘User Settings’ from the pull-down menu, on the left side menu, click on **Swift Password**,
 Generate Password by providing Description.
 
- ![](images/Picture100_Lab2.png)
+ ![](Picture100_Lab2.png)
 
 We will likely to see a long string of password. Copy and save the password.
 
@@ -230,7 +230,7 @@ RMAN>
 Now let’s login to Oracle Cloud Infrastructure console and make sure the backups are visible under Object
 Storage.
 
-![](images/Picture100_Lab3.png)
+![](Picture100_Lab3.png)
 
 ** END of SECTION #1 **
 
