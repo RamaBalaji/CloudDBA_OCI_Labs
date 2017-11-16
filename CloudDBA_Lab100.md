@@ -20,7 +20,7 @@ Database to Oracle Database hosted on Oracle Cloud Infrastructure.
 - Register the new restored database.
 - Establish TNS connection to Cloud Database
 
-### Assumptions
+## Assumptions
 
 - Oracle Cloud Infrastructure account/password.
 - On-premise Oracle Database is version 12.2 , CDB with single PDB
@@ -45,7 +45,7 @@ There are two **SECTIONS** in this document.
 
 **SECTION #2** – Restore the RMAN backupsets stored in Object Store in Oracle Cloud and build Oracle Database in **Oracle Cloud Infrastructure**. Update the database with the most current cumulative backups.
 
-##SECTION #1 ##
+## SECTION #1
 
 Backup the On-premise Oracle Database to **Oracle Object Storage** via **RMAN**.
 
